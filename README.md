@@ -1,3 +1,7 @@
+# Cities Flutter Demo App
+
+![Cities Flutter Demo App](demo/demo.gif)
+
 # flutter_app
 
 A new Flutter application.
