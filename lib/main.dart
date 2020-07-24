@@ -13,10 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
       home: MyHomePage(title: 'Welcome'),
     );
   }
@@ -207,12 +203,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Expanded(
-                          child: Column(
+                          child: Container(
+                              child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
                                 city,
                                 style: TextStyle(
+                                    decoration: TextDecoration.none,
                                     color: Colors.white,
                                     fontSize: 30,
                                     fontWeight: FontWeight.bold),
@@ -223,10 +221,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               Text(
                                 tag,
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
+                                    decoration: TextDecoration.none,
+                                    color: Colors.white,
+                                    fontSize: 20),
                               ),
                             ],
-                          ),
+                          )),
                         ),
                         Container(
                           width: 35,
